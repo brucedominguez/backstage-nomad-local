@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: example-app
+  description: An example of a Backstage application.
+  tags:
+    - java
+    - nomad
+spec:
+  type: website
+  lifecycle: experimental
+  owner:
+    individuals:
+      - john@example.com
