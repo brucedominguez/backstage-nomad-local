@@ -13,19 +13,58 @@ spec:
   dependsOn:
     - resource:default/postgres-db
 
-# ---
-# apiVersion: backstage.io/v1alpha1
-# kind: Component
-# metadata:
-#   name: example-web
-#   description: An example web of a Backstage application.
-#   tags:
-#     - java
-#     - nomad
-#     - frontend
-# spec:
-#   type: website
-#   lifecycle: experimental
-#   owner: frontent
-#   providesApis:
-#     - resource: default/example-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: example-web
+  description: An example web of a Backstage application.
+  tags:
+    - java
+    - nomad
+    - frontend
+spec:
+  type: website
+  lifecycle: experimental
+  owner: frontent
+  providesApis:
+    - resource:default/example-api
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: postgres-db
+  description: An example postgresdb of a Backstage application.
+  tags:
+    - java
+    - nomad
+    - non-pii
+spec:
+  type: database
+  owner: dba-team
+  dependencyOf:
+    - resource:default/example-api
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: example-app
+  description: An example application - system
+  tags:
+    - java
+    - nomad
+    - customer-engagement
+spec:
+  owner: customer-growth
+  domain: growth
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: growth
+  description: Everything to grow our customers
+spec:
+  owner: customer-growth
