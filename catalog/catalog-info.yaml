@@ -28,7 +28,7 @@ spec:
   lifecycle: experimental
   owner: frontent
   providesApis:
-    - resource:example-api
+    - example-api
 
 ---
 apiVersion: backstage.io/v1alpha1
@@ -44,7 +44,7 @@ spec:
   type: database
   owner: dba-team
   dependencyOf:
-    - resource:default/example-api
+    - example-api
 
 ---
 apiVersion: backstage.io/v1alpha1
