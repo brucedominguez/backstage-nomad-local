@@ -13,19 +13,19 @@ spec:
   dependsOn:
     - resource: default/postgres-db
 
----
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: example-web
-  description: An example web of a Backstage application.
-  tags:
-    - java
-    - nomad
-    - frontend
-spec:
-  type: website
-  lifecycle: experimental
-  owner: frontent
-  providesApis:
-    - resource: default/example-api
+# ---
+# apiVersion: backstage.io/v1alpha1
+# kind: Component
+# metadata:
+#   name: example-web
+#   description: An example web of a Backstage application.
+#   tags:
+#     - java
+#     - nomad
+#     - frontend
+# spec:
+#   type: website
+#   lifecycle: experimental
+#   owner: frontent
+#   providesApis:
+#     - resource: default/example-api
