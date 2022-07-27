@@ -9,6 +9,4 @@ metadata:
 spec:
   type: website
   lifecycle: experimental
-  owner:
-    individuals:
-      - john@example.com
+  owner: john.smith@example.com
