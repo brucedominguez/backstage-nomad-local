@@ -1,12 +1,31 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: example-app
-  description: An example of a Backstage application.
+  name: example-api
+  description: An example api of a Backstage application.
   tags:
     - java
     - nomad
 spec:
+  type: service
+  lifecycle: experimental
+  owner: backend-team
+  dependsOn:
+    - resource: default/postgres-db
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: example-web
+  description: An example web of a Backstage application.
+  tags:
+    - java
+    - nomad
+    - frontend
+spec:
   type: website
   lifecycle: experimental
-  owner: john.smith@example.com
+  owner: frontent
+  providesApis:
+    - resource: default/example-api
