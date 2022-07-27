@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: example-app
+  description: An example application - system
+  tags:
+    - java
+    - nomad
+    - customer-engagement
+spec:
+  owner: customer-growth
+  domain: growth
