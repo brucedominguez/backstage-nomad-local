@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: www-example-web
+  description: An example website of a Backstage application.
+spec:
+  type: website
+  lifecycle: experimental
+  owner: frontent
+  system: example-app
+  consumesApis: ['component:example-api']

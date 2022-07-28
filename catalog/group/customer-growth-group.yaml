@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: customer-growth
+  description: The backstage sub-department - customer-growth
+spec:
+  type: sub-department
+  profile:
+    displayName: Customer-growth
+    email: customer-growth@example.com
+    picture: https://avatars.dicebear.com/api/identicon/customer-growth@example.com.svg?background=%23fff&margin=25
+  parent: acme-corp
+  children: [team-c]

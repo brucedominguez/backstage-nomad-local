@@ -3,5 +3,8 @@ kind: Domain
 metadata:
   name: growth
   description: Everything to grow our customers
+  links:
+    - url: http://example.com/domain/growth/
+      title: Domain Readme
 spec:
   owner: customer-growth

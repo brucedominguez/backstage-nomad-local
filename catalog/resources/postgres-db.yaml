@@ -3,12 +3,8 @@ kind: Resource
 metadata:
   name: postgres-db
   description: An example postgresdb of a Backstage application.
-  tags:
-    - java
-    - nomad
-    - non-pii
 spec:
   type: database
   owner: dba-team
   system: example-app
-  dependencyOf: example-api
+  dependencyOf: ['example-api']

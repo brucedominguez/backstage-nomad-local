@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: frontent
+  description: The frontent team
+spec:
+  type: department
+  # Intentional no profile for testing
+  parent: acme-corp
+  children: [team-b]
