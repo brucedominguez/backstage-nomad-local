@@ -10,5 +10,5 @@ metadata:
 spec:
   type: database
   owner: dba-team
-  dependencyOf:
-    - example-api
+  system: example-app
+  dependencyOf: example-api
