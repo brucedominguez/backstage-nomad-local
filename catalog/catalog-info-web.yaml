@@ -11,4 +11,5 @@ spec:
   type: website
   lifecycle: experimental
   owner: frontent
-  providesApis: example-api
+  providesApis: 
+    - example-api
