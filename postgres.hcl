@@ -1,6 +1,3 @@
-locals {
-  path = abspath(".")
-}
 
 job "postgres" {
   datacenters = ["dc1"]
@@ -56,7 +53,6 @@ job "postgres" {
         name = "postgres"
         tags = ["postgres for backstage"]
         port = "db"
-
         check {
           name     = "alive"
           type     = "tcp"
@@ -65,12 +61,12 @@ job "postgres" {
         }
       }
     }
-    // restart {
-    //   attempts = 10
-    //   interval = "5m"
-    //   delay = "25s"
-    //   mode = "delay"
-    // }
+    restart {
+      attempts = 10
+      interval = "5m"
+      delay = "25s"
+      mode = "delay"
+    }
 
   }
 
