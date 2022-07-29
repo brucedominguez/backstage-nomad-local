@@ -4,6 +4,10 @@ What is [Backstage](https://backstage.io/). Backstage is a powerful service cata
 
 ## Getting Started
 
+### Prerequisites
+
+- Nomad - [here for install guide](https://www.nomadproject.io/docs/install)
+
 ### Start Nomad
 
 ```bash
