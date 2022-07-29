@@ -26,7 +26,7 @@ nomad job run consul.hcl
 
 Consul URL: http://localhost:8500/
 
-## Start Postgres and PgWeb
+## Start Postgres and Pgweb
 
 ```bash
 nomad job run postgres.hcl
