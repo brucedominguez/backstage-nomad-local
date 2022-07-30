@@ -9,7 +9,7 @@ client {
   servers = ["127.0.0.1"]
 
   host_volume "database" {
-    path      = "/Add Absolute Path Here/backstage-nomad/data"
+    path      = "/ADD PATH HERE TO YOUR GIT REPO/backstage-nomad/data"
     read_only = false
   }
 }

@@ -10,6 +10,15 @@ What is [Backstage](https://backstage.io/). Backstage is a powerful service cata
 
 ### Start Nomad
 
+Update the [client.hcl](./client.hcl) to update the host_volume path that will be used for the postgres database.
+
+```terraform
+  host_volume "database" {
+    path      = "/add your path here/backstage-nomad/data" <--- add your relative path here
+    read_only = false
+  }
+```
+
 ```bash
 sudo nomad agent -dev -bind 0.0.0.0 -network-interface=en0 -log-level INFO -config client.hcl
 ```
